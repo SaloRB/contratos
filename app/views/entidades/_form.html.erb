@@ -1,0 +1,107 @@
+<%= form_with(model: entidad, local: true) do |form| %>
+  <% if entidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entidad.errors.count, "error") %> prohibited this entidad from being saved:</h2>
+
+      <ul>
+      <% entidad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :entidad_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfc %>
+    <%= form.text_field :rfc, id: :entidad_rfc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curp %>
+    <%= form.text_field :curp, id: :entidad_curp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :entidad_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_ext %>
+    <%= form.text_field :no_ext, id: :entidad_no_ext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_int %>
+    <%= form.text_field :no_int, id: :entidad_no_int %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delegacion %>
+    <%= form.text_field :delegacion, id: :entidad_delegacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colonia %>
+    <%= form.text_field :colonia, id: :entidad_colonia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, id: :entidad_estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais, id: :entidad_pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_postal %>
+    <%= form.text_field :codigo_postal, id: :entidad_codigo_postal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono_1 %>
+    <%= form.text_field :telefono_1, id: :entidad_telefono_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono_2 %>
+    <%= form.text_field :telefono_2, id: :entidad_telefono_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono_3 %>
+    <%= form.text_field :telefono_3, id: :entidad_telefono_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :entidad_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contacto_1 %>
+    <%= form.text_field :contacto_1, id: :entidad_contacto_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contacto_2 %>
+    <%= form.text_field :contacto_2, id: :entidad_contacto_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_entidad_id %>
+    <%= form.collection_select :tipo_entidad_id, TipoEntidad.order(:tipo),:id,:tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

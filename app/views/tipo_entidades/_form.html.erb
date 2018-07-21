@@ -1,0 +1,22 @@
+<%= form_with(model: tipo_entidad, local: true) do |form| %>
+  <% if tipo_entidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_entidad.errors.count, "error") %> prohibited this tipo_entidad from being saved:</h2>
+
+      <ul>
+      <% tipo_entidad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :tipo_entidad_tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
