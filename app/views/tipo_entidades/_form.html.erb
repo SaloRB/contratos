@@ -18,13 +18,13 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="field">
-          <%= form.text_field :tipo, id: :tipo_entidad_tipo, class: "form-control" %>
+          <%= form.text_field :tipo, id: :tipo_entidad_tipo, class: "form-control", required: true %>
         </div>
       </li>
 
       <li class="list-group-item">
-        <div class="actions">
-          <%= form.submit "Guardar", class: "btn btn-primary btn-block" %>
+        <div class="actions text-center">
+          <%= form.submit "Guardar", class: "btn btn-primary btn-lg" %>
         </div>
       </li>
     </ul>
