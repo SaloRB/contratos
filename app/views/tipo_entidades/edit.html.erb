@@ -1,6 +1,8 @@
-<h1>Editing Tipo Entidad</h1>
+<% provide(:page_title, 'Editar Tipo de Entidad') %>
 
+<div class="text-secondary">
+<br>
 <%= render 'form', tipo_entidad: @tipo_entidad %>
-
-<%= link_to 'Show', @tipo_entidad %> |
-<%= link_to 'Back', tipo_entidades_path %>
+<br>
+<%= link_to 'Volver', tipo_entidades_path, class: "btn btn-sm btn-secondary" %>
+</div>

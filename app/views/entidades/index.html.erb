@@ -1,27 +1,13 @@
-<p id="notice"><%= notice %></p>
+<% provide(:entidades_active, 'active') %>
 
-<h1>Entidades</h1>
+<p class="text-success" id="notice"><%= notice %></p>
 
-<table>
+<h3 class="text-primary">Entidades</h3>
+
+<table class="table table-striped text-secondary">
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>RFC</th>
-      <th>CURP</th>
-      <th>Dirección</th>
-      <th>Número Exterior</th>
-      <th>Número Interior</th>
-      <th>Delegación</th>
-      <th>Colonia</th>
-      <th>Estado</th>
-      <th>País</th>
-      <th>Código postal</th>
-      <th>Teléfono 1</th>
-      <th>Teléfono 2</th>
-      <th>Teléfono 3</th>
-      <th>Email</th>
-      <th>Contacto 1</th>
-      <th>Contacto 2</th>
       <th>Tipo Entidad</th>
       <th colspan="3"></th>
     </tr>
@@ -31,26 +17,9 @@
     <% @entidades.each do |entidad| %>
       <tr>
         <td><%= entidad.nombre %></td>
-        <td><%= entidad.rfc %></td>
-        <td><%= entidad.curp %></td>
-        <td><%= entidad.direccion %></td>
-        <td><%= entidad.no_ext %></td>
-        <td><%= entidad.no_int %></td>
-        <td><%= entidad.delegacion %></td>
-        <td><%= entidad.colonia %></td>
-        <td><%= entidad.estado %></td>
-        <td><%= entidad.pais %></td>
-        <td><%= entidad.codigo_postal %></td>
-        <td><%= entidad.telefono_1 %></td>
-        <td><%= entidad.telefono_2 %></td>
-        <td><%= entidad.telefono_3 %></td>
-        <td><%= entidad.email %></td>
-        <td><%= entidad.contacto_1 %></td>
-        <td><%= entidad.contacto_2 %></td>
         <td><%= entidad.tipo_entidad.tipo %></td>
-        <td><%= link_to 'Show', entidad %></td>
-        <td><%= link_to 'Edit', edit_entidad_path(entidad) %></td>
-        <td><%= link_to 'Destroy', entidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_entidad_path(entidad), class: "btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Eliminar', entidad, method: :delete, data: { confirm: '¿Está seguro?' }, class: "btn btn-sm btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -58,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Entidad', new_entidad_path %>
+<%= link_to 'Nueva Entidad', new_entidad_path, class: "btn btn-sm btn-secondary" %>

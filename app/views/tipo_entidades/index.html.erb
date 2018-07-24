@@ -1,22 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% provide(:tipo_entidades_active, 'active') %>
 
-<h1>Tipo Entidades</h1>
+<p class="text-success" id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tipo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h3 class="text-primary">Tipos de Entidades</h3>
+
+<table class="table table-striped text-secondary">
 
   <tbody>
     <% @tipo_entidades.each do |tipo_entidad| %>
       <tr>
         <td><%= tipo_entidad.tipo %></td>
-        <td><%= link_to 'Show', tipo_entidad %></td>
-        <td><%= link_to 'Edit', edit_tipo_entidad_path(tipo_entidad) %></td>
-        <td><%= link_to 'Destroy', tipo_entidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_tipo_entidad_path(tipo_entidad), class: "btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Eliminar', tipo_entidad, method: :delete, data: { confirm: '¿Está seguro?' }, class: "btn btn-sm btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +19,4 @@
 
 <br>
 
-<%= link_to 'New Tipo Entidad', new_tipo_entidad_path %>
+<%= link_to 'Nuevo Tipo de Entidad', new_tipo_entidad_path, class: "btn btn-sm btn-secondary" %>

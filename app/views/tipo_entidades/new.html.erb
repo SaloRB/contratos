@@ -1,5 +1,8 @@
-<h1>New Tipo Entidad</h1>
+<% provide(:page_title, 'Nuevo Tipo Entidad') %>
 
+<div class="text-secondary">
+<br>
 <%= render 'form', tipo_entidad: @tipo_entidad %>
 
-<%= link_to 'Back', tipo_entidades_path %>
+<%= link_to 'Volver', tipo_entidades_path, class: "btn btn-sm btn-secondary" %>
+</div>

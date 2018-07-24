@@ -11,97 +11,142 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :entidad_nombre %>
-  </div>
+  <h5 class="text-center"><%= yield(:page_title) %></h5>
+  
+  <div class="container">
+    <ul class="row">
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :nombre %>
+          <%= form.text_field :nombre, id: :entidad_nombre %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :rfc %>
-    <%= form.text_field :rfc, id: :entidad_rfc %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :rfc, "RFC" %>
+          <%= form.text_field :rfc, id: :entidad_rfc %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :curp %>
-    <%= form.text_field :curp, id: :entidad_curp %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :curp, "CURP" %>
+          <%= form.text_field :curp, id: :entidad_curp %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :direccion %>
-    <%= form.text_field :direccion, id: :entidad_direccion %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :direccion, "Dirección" %>
+          <%= form.text_field :direccion, id: :entidad_direccion %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :no_ext %>
-    <%= form.text_field :no_ext, id: :entidad_no_ext %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :no_ext, "Número Exterior" %>
+          <%= form.text_field :no_ext, id: :entidad_no_ext %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :no_int %>
-    <%= form.text_field :no_int, id: :entidad_no_int %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :no_int, "Número Interior" %>
+          <%= form.text_field :no_int, id: :entidad_no_int %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :delegacion %>
-    <%= form.text_field :delegacion, id: :entidad_delegacion %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :delegacion, "Delegación" %>
+          <%= form.text_field :delegacion, id: :entidad_delegacion %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :colonia %>
-    <%= form.text_field :colonia, id: :entidad_colonia %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :colonia %>
+          <%= form.text_field :colonia, id: :entidad_colonia %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :estado %>
-    <%= form.text_field :estado, id: :entidad_estado %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :estado %>
+          <%= form.text_field :estado, id: :entidad_estado %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :pais %>
-    <%= form.text_field :pais, id: :entidad_pais %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :pais, "País" %>
+          <%= form.text_field :pais, id: :entidad_pais %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :codigo_postal %>
-    <%= form.text_field :codigo_postal, id: :entidad_codigo_postal %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :codigo_postal, "Código Postal" %>
+          <%= form.text_field :codigo_postal, id: :entidad_codigo_postal %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :telefono_1 %>
-    <%= form.text_field :telefono_1, id: :entidad_telefono_1 %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :telefono_1, "Teléfono 1" %>
+          <%= form.text_field :telefono_1, id: :entidad_telefono_1 %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :telefono_2 %>
-    <%= form.text_field :telefono_2, id: :entidad_telefono_2 %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :telefono_2, "Teléfono 2" %>
+          <%= form.text_field :telefono_2, id: :entidad_telefono_2 %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :telefono_3 %>
-    <%= form.text_field :telefono_3, id: :entidad_telefono_3 %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :telefono_3, "Teléfono 3" %>
+          <%= form.text_field :telefono_3, id: :entidad_telefono_3 %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :entidad_email %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :entidad_email %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :contacto_1 %>
-    <%= form.text_field :contacto_1, id: :entidad_contacto_1 %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :contacto_1 %>
+          <%= form.text_field :contacto_1, id: :entidad_contacto_1 %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :contacto_2 %>
-    <%= form.text_field :contacto_2, id: :entidad_contacto_2 %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :contacto_2 %>
+          <%= form.text_field :contacto_2, id: :entidad_contacto_2 %>
+        </div>
+      </li>
 
-  <div class="field">
-    <%= form.label :tipo_entidad_id %>
-    <%= form.collection_select :tipo_entidad_id, TipoEntidad.order(:tipo),:id,:tipo %>
-  </div>
+      <li class="col-md-4 list-group-item">
+        <div class="field">
+          <%= form.label :tipo_entidad_id, "Tipo de Entidad" %>
+          <%= form.collection_select :tipo_entidad_id, TipoEntidad.order(:tipo),:id,:tipo %>
+        </div>
+      </li>
 
-  <div class="actions">
-    <%= form.submit %>
+      <li class="col-sm-12 list-group-item">
+        <div class="actions">
+          <%= form.submit "Guardar Entidad", class: "btn btn-primary" %>
+        </div>
+      </li>
+    </ul>
   </div>
 <% end %>
+<br>

@@ -1,0 +1,13 @@
+//Variable Overrides
+$theme-colors: (
+	"primary": #121B61,
+	"secondary": #FC4C02
+);
+
+$card-spacer-y: 0;
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+@import "bootstrap";

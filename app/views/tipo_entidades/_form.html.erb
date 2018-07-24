@@ -11,12 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :tipo %>
-    <%= form.text_field :tipo, id: :tipo_entidad_tipo %>
-  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center"><%= yield(:page_title) %></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="field">
+          <%= form.text_field :tipo, id: :tipo_entidad_tipo, class: "form-control" %>
+        </div>
+      </li>
 
-  <div class="actions">
-    <%= form.submit %>
+      <li class="list-group-item">
+        <div class="actions">
+          <%= form.submit "Guardar", class: "btn btn-primary btn-block" %>
+        </div>
+      </li>
+    </ul>
   </div>
 <% end %>
+<br>

@@ -1,6 +1,13 @@
-<h1>Editing Entidad</h1>
+<% provide(:page_title, 'Editar Entidad') %>
 
+<div class="text-secondary">
+<br>
 <%= render 'form', entidad: @entidad %>
 
-<%= link_to 'Show', @entidad %> |
-<%= link_to 'Back', entidades_path %>
+<%= link_to 'Show', @entidad, class: "btn btn-sm btn-secondary" %>
+
+<br>
+<br>
+
+<%= link_to 'Back', entidades_path, class: "btn btn-sm btn-secondary" %>
+</div>
