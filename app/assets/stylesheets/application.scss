@@ -4,10 +4,8 @@ $theme-colors: (
 	"secondary": #FC4C02
 );
 
-$card-spacer-y: 0;
-
-.padding {
-  padding-bottom: 2rem;
-}
-
 @import "bootstrap";
+
+.list-group-item {
+	border: none;
+}
