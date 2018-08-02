@@ -8,7 +8,7 @@ class SesionesController < ApplicationController
 	    session[:usuario_id] = usuario.id
 	    redirect_to root_url, notice: '¡Bienvenido ' << usuario.email << '!'
 	  else
-	    flash.now.notice = 'Usuario o contraseña inválido'
+	    flash.now.notice = 'Usuario o contraseña incorrectos'
 	    render :new
 	  end
 	end
