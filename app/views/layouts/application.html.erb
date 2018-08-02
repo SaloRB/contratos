@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contratos</title>
+    <title><%= yield(:page_title) %> | Contratos</title>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag       'favicon.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +11,9 @@
   <body>
   	<%= render "partials/navbar" %>
   	<div class="container-fluid">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
     	<%= yield %>
     </div>
   </body>
