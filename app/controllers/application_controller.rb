@@ -5,5 +5,9 @@ class ApplicationController < ActionController::Base
   	@usuario_actual ||= Usuario.find(session[:usuario_id]) if session[:usuario_id]
   end
 
-  helper_method :logged_in?
+  def user_admin?
+  	@usuario_admin = Usuario.find(session[:usuario_id]).admin
+  end  
+
+  helper_method :logged_in?, :user_admin?
 end

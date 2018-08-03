@@ -8,6 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <% if logged_in? %>
+              <% if user_admin? %>
+                <li class="nav-item">
+                  <%= link_to "Nuevo Usuario", signup_path, class: "nav-link #{yield(:usuarios_active)}" %>
+                </li>
+              <% end %>
               <li class="nav-item">
                 <%= link_to "Tipo Entidades", tipo_entidades_path, class: "nav-link #{yield(:tipo_entidades_active)}" %>
               </li>
@@ -18,9 +23,6 @@
                 <%= link_to 'Logout', logout_path, class: "nav-link" %>
               </li>
             <% else %>
-              <li class="nav-item">
-                <%= link_to "Sign Up", signup_path, class: "nav-link #{yield(:usuarios_active)}" %>
-              </li>
               <li class="nav-item">
                 <%= link_to "Log In", login_path, class: "nav-link #{yield(:sesiones_active)}" %>
               </li>

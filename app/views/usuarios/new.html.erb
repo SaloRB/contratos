@@ -1,28 +1,32 @@
 <% provide(:usuarios_active, 'active') %>
-<h1>Sign Up</h1>
-<%= form_for @usuario do |f| %>
-  <% if @usuario.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% @usuario.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="login-form">
+  <%= form_for @usuario do |f| %>
+    <% if @usuario.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @usuario.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.text_field :email, {placeholder: 'Usuario', class: "form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.password_field :password, {placeholder: 'Contraseña', class: "form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.password_field :password_confirmation, {placeholder: 'Confirmar Contraseña', class: "form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.label 'Administrador' %></br>
+      <%= f.check_box :admin %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Sign Up", class: "btn btn-primary btn-block" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit "Sign Up" %></div>
-<% end %>
+</div>
