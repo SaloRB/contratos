@@ -1,4 +1,5 @@
 <% provide(:usuarios_active, 'active') %>
+<% provide(:page_title, 'Nuevo Usuario') %>
 <div class="login-form">
   <%= form_for @usuario do |f| %>
     <% if @usuario.errors.any? %>
@@ -21,12 +22,11 @@
     <div class="form-group">
       <%= f.password_field :password_confirmation, {placeholder: 'Confirmar Contraseña', class: "form-control"} %>
     </div>
+    <label class="form-group checkbox" style="color: #606060">
+      <%= f.check_box :admin %> Administrador
+    </label>
     <div class="form-group">
-      <%= f.label 'Administrador' %></br>
-      <%= f.check_box :admin %>
-    </div>
-    <div class="form-group">
-      <%= f.submit "Sign Up", class: "btn btn-primary btn-block" %>
+      <%= f.submit "Crear Usuario", class: "btn btn-primary btn-block" %>
     </div>
   <% end %>
 </div>

@@ -1,4 +1,5 @@
 <% provide(:sesiones_active, 'active') %>
+<% provide(:page_title, 'Iniciar Sesión') %>
 <div class="login-form">
 	<%= form_tag sesiones_path do %>
 	  <div class="form-group">
@@ -8,7 +9,7 @@
 	    <%= password_field_tag :password, nil, {placeholder: "Contraseña", class: "form-control"} %>
 	  </div>
 	  <div class="form-group">
-	  	<%= submit_tag "Log In", class: "btn btn-primary btn-block" %>
+	  	<%= submit_tag "Iniciar Sesión", class: "btn btn-primary btn-block" %>
 	  </div>
 	<% end %>
 </div>
