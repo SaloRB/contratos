@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Usuarios
-Usuario.create!(email: 'admin@example.com', password: 'password', password_cofirmation: 'password', admin: true)
+Usuario.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', admin: true)
 
 # Tipos de Entidad
 TipoEntidad.create!(tipo: "Cliente")
