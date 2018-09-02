@@ -20,7 +20,7 @@ class EntidadesControllerTest < ActionDispatch::IntegrationTest
       post entidades_url, params: { entidad: { codigo_postal: @entidad.codigo_postal, colonia: @entidad.colonia, contacto_1: @entidad.contacto_1, contacto_2: @entidad.contacto_2, curp: @entidad.curp, delegacion: @entidad.delegacion, direccion: @entidad.direccion, email: @entidad.email, estado: @entidad.estado, no_ext: @entidad.no_ext, no_int: @entidad.no_int, nombre: @entidad.nombre, pais: @entidad.pais, rfc: @entidad.rfc, telefono_1: @entidad.telefono_1, telefono_2: @entidad.telefono_2, telefono_3: @entidad.telefono_3, tipo_entidad_id: @entidad.tipo_entidad_id } }
     end
 
-    assert_redirected_to entidad_url(Entidad.last)
+    assert_redirected_to entidades_url
   end
 
   test "should show entidad" do
@@ -35,7 +35,7 @@ class EntidadesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update entidad" do
     patch entidad_url(@entidad), params: { entidad: { codigo_postal: @entidad.codigo_postal, colonia: @entidad.colonia, contacto_1: @entidad.contacto_1, contacto_2: @entidad.contacto_2, curp: @entidad.curp, delegacion: @entidad.delegacion, direccion: @entidad.direccion, email: @entidad.email, estado: @entidad.estado, no_ext: @entidad.no_ext, no_int: @entidad.no_int, nombre: @entidad.nombre, pais: @entidad.pais, rfc: @entidad.rfc, telefono_1: @entidad.telefono_1, telefono_2: @entidad.telefono_2, telefono_3: @entidad.telefono_3, tipo_entidad_id: @entidad.tipo_entidad_id } }
-    assert_redirected_to entidad_url(@entidad)
+    assert_redirected_to entidades_url
   end
 
   test "should destroy entidad" do

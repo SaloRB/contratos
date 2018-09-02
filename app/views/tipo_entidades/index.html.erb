@@ -1,21 +1,23 @@
-<% provide(:tipo_entidades_active, 'active') %>
+<% provide(:entidades_active, 'active') %>
 <% provide(:page_title, 'Tipo Entidades') %>
 
-<h3 class="text-primary">Tipos de Entidades</h3>
-
+<h3 class="text-primary">Tipos de Entidad</h3>
+<br>
+<%= link_to 'Nuevo Tipo de Entidad', new_tipo_entidad_path, class: "btn btn-lg btn-secondary" %>
+<br>
+<br>
 <table class="table table-striped text-secondary">
-
   <tbody>
     <% @tipo_entidades.each do |tipo_entidad| %>
       <tr>
         <td><%= tipo_entidad.tipo %></td>
         <td><%= link_to 'Editar', edit_tipo_entidad_path(tipo_entidad), class: "btn btn-sm btn-secondary" %></td>
-        <td><%= link_to 'Eliminar', tipo_entidad, method: :delete, data: { confirm: '¿Está seguro?' }, class: "btn btn-sm btn-danger" %></td>
+        <% if !tipo_entidad_en_uso?(tipo_entidad) %>
+        	<td><%= link_to 'Eliminar', tipo_entidad, method: :delete, data: { confirm: '¿Está seguro?' }, class: "btn btn-sm btn-danger" %></td>
+        <% else %>
+        	<td></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nuevo Tipo de Entidad', new_tipo_entidad_path, class: "btn btn-sm btn-secondary" %>

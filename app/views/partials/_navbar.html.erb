@@ -1,4 +1,6 @@
-      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-primary"> -->
+      <nav class="navbar navbar-fixed-top navbar-dark bg-primary navbar-expand-sm">
+        <div class="container">
         <%= link_to "AG7", root_path, class: "navbar-brand" %>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -13,11 +15,19 @@
                   <%= link_to "Nuevo Usuario", signup_path, class: "nav-link #{yield(:usuarios_active)}" %>
                 </li>
               <% end %>
-              <li class="nav-item">
-                <%= link_to "Tipo Entidades", tipo_entidades_path, class: "nav-link #{yield(:tipo_entidades_active)}" %>
+              <li class="nav-item dropdown">
+                <%= link_to "Entidades", '#', { class: "nav-link dropdown-toggle #{yield(:entidades_active)}", id: "navbarDropdown", "role" => "button", "data-toggle" => "dropdown" } %>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <%= link_to "Tipo Entidades", tipo_entidades_path, class: "dropdown-item" %>
+                  <%= link_to "Entidades", entidades_path, class: "dropdown-item" %>
+                </div>
               </li>
-              <li class="nav-item">
-                <%= link_to "Entidades", entidades_path, class: "nav-link #{yield(:entidades_active)}" %>
+              <li class="nav-item dropdown">
+                <%= link_to "Servicios", '#', { class: "nav-link dropdown-toggle #{yield(:servicios_active)}", id: "navbarDropdown", "role" => "button", "data-toggle" => "dropdown" } %>
+                <div class="dropdown-menu">
+                  <%= link_to "Tipo Servicios", tipo_servicios_path, class: "dropdown-item" %>
+                  <%= link_to "Servicios", servicios_path, class: "dropdown-item" %>
+                </div>
               </li>
               <li class="nav-item">
                 <%= link_to 'Cerrar Sesión', logout_path, class: "nav-link" %>
@@ -28,5 +38,6 @@
               </li>
             <% end %>
           </ul>
-        </div>        
+        </div>
+        </div>   
       </nav>

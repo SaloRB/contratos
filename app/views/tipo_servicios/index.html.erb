@@ -1,0 +1,23 @@
+<% provide(:servicios_active, 'active') %>
+<% provide(:page_title, 'Tipo Servicios') %>
+
+<h3 class="text-primary">Tipos de Servicio</h3>
+<br>
+<%= link_to 'Nuevo Tipo de Servicio', new_tipo_servicio_path, class: "btn btn-lg btn-secondary" %>
+<br>
+<br>
+<table class="table table-striped text-secondary">
+  <tbody>
+    <% @tipo_servicios.each do |tipo_servicio| %>
+      <tr>
+        <td><%= tipo_servicio.tipo %></td>
+        <td><%= link_to 'Editar', edit_tipo_servicio_path(tipo_servicio), class: "btn btn-sm btn-secondary" %></td>
+        <% if !tipo_servicio_en_uso?(tipo_servicio) %>
+        	<td><%= link_to 'Eliminar', tipo_servicio, method: :delete, data: { confirm: '¿Está seguro?' }, class: "btn btn-sm btn-danger" %></td>
+        <% else %>
+        	<td></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

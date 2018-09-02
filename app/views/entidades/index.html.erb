@@ -2,7 +2,10 @@
 <% provide(:page_title, 'Entidades') %>
 
 <h3 class="text-primary">Entidades</h3>
-
+<br>
+<%= link_to 'Nueva Entidad', new_entidad_path, class: "btn btn-lg btn-secondary" %>
+<br>
+<br>
 <table class="table table-striped text-secondary">
   <thead>
     <tr>
@@ -23,7 +26,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nueva Entidad', new_entidad_path, class: "btn btn-sm btn-secondary" %>

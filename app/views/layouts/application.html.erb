@@ -10,9 +10,10 @@
 
   <body>
   	<%= render "partials/navbar" %>
-  	<div class="container-fluid">
+    <br>
+  	<div class="container">
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, id: "flash_#{name}" %>
+        <%= content_tag :div, msg, class: "alert alert-#{name}" %>
       <% end %>
     	<%= yield %>
     </div>

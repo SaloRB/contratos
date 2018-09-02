@@ -1,10 +1,10 @@
-<%= form_with(model: tipo_entidad, local: true) do |form| %>
-  <% if tipo_entidad.errors.any? %>
+<%= form_with(model: tipo_servicio, local: true) do |form| %>
+  <% if tipo_servicio.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(tipo_entidad.errors.count, "error") %> prohibieron que éste Tipo de Entidad sea guardado:</h2>
+      <h2><%= pluralize(tipo_servicio.errors.count, "error") %> prohibieron que este Tipo de Servicio sea guardado:</h2>
 
       <ul>
-      <% tipo_entidad.errors.full_messages.each do |message| %>
+      <% tipo_servicio.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -18,7 +18,7 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="field">
-          <%= form.text_field :tipo, id: :tipo_entidad_tipo, class: "form-control", required: true %>
+          <%= form.text_field :tipo, id: :tipo_servicio_tipo, class: "form-control", required: true %>
         </div>
       </li>
 
