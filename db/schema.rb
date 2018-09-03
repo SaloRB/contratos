@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180902182948) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "entidades", force: :cascade do |t|
     t.string "nombre"
     t.string "rfc"
@@ -33,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180902182948) do
     t.string "email"
     t.string "contacto_1"
     t.string "contacto_2"
-    t.bigint "tipo_entidad_id"
+    t.integer "tipo_entidad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tipo_entidad_id"], name: "index_entidades_on_tipo_entidad_id"
@@ -41,7 +38,7 @@ ActiveRecord::Schema.define(version: 20180902182948) do
 
   create_table "servicios", force: :cascade do |t|
     t.string "nombre"
-    t.bigint "tipo_servicio_id"
+    t.integer "tipo_servicio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tipo_servicio_id"], name: "index_servicios_on_tipo_servicio_id"
@@ -62,11 +59,9 @@ ActiveRecord::Schema.define(version: 20180902182948) do
   create_table "usuarios", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin"
   end
 
-  add_foreign_key "entidades", "tipo_entidades"
-  add_foreign_key "servicios", "tipo_servicios"
 end
