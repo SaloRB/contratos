@@ -1,8 +1,9 @@
 <%= form_with(model: tipo_servicio, local: true) do |form| %>
   <% if tipo_servicio.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(tipo_servicio.errors.count, "error") %> prohibieron que este Tipo de Servicio sea guardado:</h2>
-
+      <div class="alert alert-danger">
+        La forma tiene <%= pluralize(tipo_servicio.errors.count, "error") %>.
+      </div>
       <ul>
       <% tipo_servicio.errors.full_messages.each do |message| %>
         <li><%= message %></li>

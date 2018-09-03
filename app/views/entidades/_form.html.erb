@@ -1,8 +1,9 @@
 <%= form_with(model: entidad, local: true) do |form| %>
   <% if entidad.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(entidad.errors.count, "error") %> prohibieron que ésta Entidad sea guardada:</h2>
-
+      <div class="alert alert-danger">
+        La forma tiene <%= pluralize(entidad.errors.count, "error") %>.
+      </div>
       <ul>
       <% entidad.errors.full_messages.each do |message| %>
         <li><%= message %></li>

@@ -1,5 +1,6 @@
 class EntidadesController < ApplicationController
-  before_action :set_entidad, only: [:show, :edit, :update, :destroy]
+  before_action :set_entidad,    only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :new, :edit, :update, :destroy]
 
   def index
     @entidades = Entidad.all

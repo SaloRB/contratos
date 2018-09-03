@@ -1,5 +1,6 @@
 class ServiciosController < ApplicationController
-  before_action :set_servicio,    only: [:show, :edit, :update, :destroy]
+  before_action :set_servicio,   only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :new, :edit, :update, :destroy]
 
   def index
     @servicios = Servicio.all

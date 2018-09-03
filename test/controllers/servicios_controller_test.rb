@@ -6,18 +6,27 @@ class ServiciosControllerTest < ActionDispatch::IntegrationTest
     @servicio = servicios(:one)
   end
 
-  test "should get index" do
-    get servicios_url
-    assert_response :success
+  test "should redirect index when not logged in" do
+    get servicios_path
+    assert_not flash.empty?
+    assert_redirected_to login_url
   end
 
-  test "should get new" do
-    get new_servicio_url
-    assert_response :success
+  test "should redirect new when not logged in" do
+    get new_servicio_path
+    assert_not flash.empty?
+    assert_redirected_to login_url
   end
 
-  test "should get edit" do
-    get edit_servicio_url(@servicio)
-    assert_response :success
+  test "should redirect update when not logged in" do
+    patch servicio_path(@servicio), params: { nombre: @servicio.nombre }
+    assert_not flash.empty?
+    assert_redirected_to login_url
+  end
+
+  test "should redirect edit when not logged in" do
+    get edit_servicio_path(@servicio)
+    assert_not flash.empty?
+    assert_redirected_to login_url
   end
 end

@@ -1,5 +1,6 @@
 class TipoEntidadesController < ApplicationController
   before_action :set_tipo_entidad,    only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :new, :edit, :update, :destroy]
 
   def index
     @tipo_entidades = TipoEntidad.all
