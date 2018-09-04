@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'bootstrap'
+gem 'country_select', '3.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

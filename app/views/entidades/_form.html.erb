@@ -51,7 +51,7 @@
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
       <%= form.label :pais, "País" %>
-      <%= form.text_field :pais, id: :entidad_pais, class: "form-control" %>
+      <%= form.country_select :pais, { priority_countries: ["MX"] }, id: :entidad_pais, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
