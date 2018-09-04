@@ -1,16 +1,5 @@
 <%= form_with(model: entidad, local: true) do |form| %>
-  <% if entidad.errors.any? %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        La forma tiene <%= pluralize(entidad.errors.count, "error") %>.
-      </div>
-      <ul>
-      <% entidad.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'partials/errores', object: form.object %>
 
   <h5 class="text-center"><%= yield(:page_title) %></h5>
   

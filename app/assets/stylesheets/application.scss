@@ -6,7 +6,6 @@ $theme-colors: (
 
 @import "bootstrap";
 
-#D07B7B
 .list-group-item {
 	border: none;
 }
@@ -28,5 +27,13 @@ $theme-colors: (
 	ul {
 		color: red;
 		margin: 0 0 30px 0;
+	}
+}
+
+.navbar {
+	.navbar-brand {
+		.secondary {
+			color: #FC4C02;
+		}
 	}
 }

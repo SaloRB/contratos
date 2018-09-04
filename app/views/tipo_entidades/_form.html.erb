@@ -1,16 +1,5 @@
 <%= form_with(model: tipo_entidad, local: true) do |form| %>
-  <% if tipo_entidad.errors.any? %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        La forma tiene <%= pluralize(tipo_entidad.errors.count, "error") %>.
-      </div>
-      <ul>
-      <% tipo_entidad.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'partials/errores', object: form.object %>
 
   <div class="card">
     <div class="card-body">
