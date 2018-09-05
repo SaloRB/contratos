@@ -1,5 +1,5 @@
-<%= form_with(model: tipo_servicio, local: true) do |form| %>
-  <%= render 'partials/errores', object: form.object %>
+<%= form_with(model: tipo_servicio, local: true) do |f| %>
+  <%= render 'partials/errores', object: f.object %>
 
   <div class="card">
     <div class="card-body">
@@ -8,13 +8,13 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="field">
-          <%= form.text_field :tipo, id: :tipo_servicio_tipo, class: "form-control", required: true %>
+          <%= f.text_field :tipo, id: :tipo_servicio_tipo, class: "form-control", required: true %>
         </div>
       </li>
 
       <li class="list-group-item">
         <div class="actions text-center">
-          <%= form.submit "Guardar", class: "btn btn-primary btn-lg" %>
+          <%= f.submit "Guardar", class: "btn btn-primary btn-lg" %>
         </div>
       </li>
     </ul>

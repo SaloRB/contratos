@@ -1,102 +1,102 @@
-<%= form_with(model: entidad, local: true) do |form| %>
-  <%= render 'partials/errores', object: form.object %>
+<%= form_with(model: entidad, local: true) do |f| %>
+  <%= render 'partials/errores', object: f.object %>
 
   <h5 class="text-center"><%= yield(:page_title) %></h5>
   
   <ul class="row">
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :nombre %>
-      <%= form.text_field :nombre, id: :entidad_nombre, class: "form-control", required: true %>
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre, id: :entidad_nombre, class: "form-control", required: true %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :rfc, "RFC" %>
-      <%= form.text_field :rfc, id: :entidad_rfc, class: "form-control" %>
+      <%= f.label :rfc, "RFC" %>
+      <%= f.text_field :rfc, id: :entidad_rfc, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :curp, "CURP" %>
-      <%= form.text_field :curp, id: :entidad_curp, class: "form-control" %>
+      <%= f.label :curp, "CURP" %>
+      <%= f.text_field :curp, id: :entidad_curp, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :direccion, "Dirección" %>
-      <%= form.text_field :direccion, id: :entidad_direccion, class: "form-control" %>
+      <%= f.label :direccion, "Dirección" %>
+      <%= f.text_field :direccion, id: :entidad_direccion, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :no_ext, "Número Exterior" %>
-      <%= form.text_field :no_ext, id: :entidad_no_ext, class: "form-control" %>
+      <%= f.label :no_ext, "Número Exterior" %>
+      <%= f.text_field :no_ext, id: :entidad_no_ext, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :no_int, "Número Interior" %>
-      <%= form.text_field :no_int, id: :entidad_no_int, class: "form-control" %>
+      <%= f.label :no_int, "Número Interior" %>
+      <%= f.text_field :no_int, id: :entidad_no_int, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :delegacion, "Delegación" %>
-      <%= form.text_field :delegacion, id: :entidad_delegacion, class: "form-control" %>
+      <%= f.label :delegacion, "Delegación" %>
+      <%= f.text_field :delegacion, id: :entidad_delegacion, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :colonia %>
-      <%= form.text_field :colonia, id: :entidad_colonia, class: "form-control" %>
+      <%= f.label :colonia %>
+      <%= f.text_field :colonia, id: :entidad_colonia, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :estado %>
-      <%= form.text_field :estado, id: :entidad_estado, class: "form-control" %>
+      <%= f.label :estado %>
+      <%= f.text_field :estado, id: :entidad_estado, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :pais, "País" %>
-      <%= form.country_select :pais, { priority_countries: ["MX"] }, id: :entidad_pais, class: "form-control" %>
+      <%= f.label :pais, "País" %>
+      <%= f.country_select :pais, { priority_countries: ["MX"] }, id: :entidad_pais, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :codigo_postal, "Código Postal" %>
-      <%= form.text_field :codigo_postal, id: :entidad_codigo_postal, class: "form-control" %>
+      <%= f.label :codigo_postal, "Código Postal" %>
+      <%= f.text_field :codigo_postal, id: :entidad_codigo_postal, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :telefono_1, "Teléfono 1" %>
-      <%= form.text_field :telefono_1, id: :entidad_telefono_1, class: "form-control" %>
+      <%= f.label :telefono_1, "Teléfono 1" %>
+      <%= f.text_field :telefono_1, id: :entidad_telefono_1, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :telefono_2, "Teléfono 2" %>
-      <%= form.text_field :telefono_2, id: :entidad_telefono_2, class: "form-control" %>
+      <%= f.label :telefono_2, "Teléfono 2" %>
+      <%= f.text_field :telefono_2, id: :entidad_telefono_2, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :telefono_3, "Teléfono 3" %>
-      <%= form.text_field :telefono_3, id: :entidad_telefono_3, class: "form-control" %>
+      <%= f.label :telefono_3, "Teléfono 3" %>
+      <%= f.text_field :telefono_3, id: :entidad_telefono_3, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :email %>
-      <%= form.text_field :email, id: :entidad_email, class: "form-control" %>
+      <%= f.label :email %>
+      <%= f.text_field :email, id: :entidad_email, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :contacto_1 %>
-      <%= form.text_field :contacto_1, id: :entidad_contacto_1, class: "form-control" %>
+      <%= f.label :contacto_1 %>
+      <%= f.text_field :contacto_1, id: :entidad_contacto_1, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :contacto_2 %>
-      <%= form.text_field :contacto_2, id: :entidad_contacto_2, class: "form-control" %>
+      <%= f.label :contacto_2 %>
+      <%= f.text_field :contacto_2, id: :entidad_contacto_2, class: "form-control" %>
     </li>
 
     <li class="col-lg-3 col-md-4 col-sm-6 list-group-item">
-      <%= form.label :tipo_entidad_id, "Tipo de Entidad" %>
-      <%= form.collection_select :tipo_entidad_id, TipoEntidad.order(:tipo), :id, :tipo, {prompt: "Seleccione una opción"}, {class: "form-control", required: true} %>
+      <%= f.label :tipo_entidad_id, "Tipo de Entidad" %>
+      <%= f.collection_select :tipo_entidad_id, TipoEntidad.order(:tipo), :id, :tipo, {prompt: "Seleccione una opción"}, {class: "form-control", required: true} %>
     </li>
 
     <li class="col-12 list-group-item">
       <div class="text-center">
-        <%= form.submit "Guardar", class: "btn btn-primary btn-lg" %>
+        <%= f.submit "Guardar", class: "btn btn-primary btn-lg" %>
       </div>
     </li>
   </ul>
