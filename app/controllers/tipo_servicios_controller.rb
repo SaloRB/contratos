@@ -24,7 +24,7 @@ class TipoServiciosController < ApplicationController
   end
 
   def update
-    if @tipo_servicio.update(tipo_entidad_params)
+    if @tipo_servicio.update(tipo_servicio_params)
       flash[:success] = "Tipo Servicio '#{@tipo_servicio.tipo}' actualizado correctamente."
       redirect_to tipo_servicios_path
     else
