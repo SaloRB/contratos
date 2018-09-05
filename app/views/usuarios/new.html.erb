@@ -1,23 +1,23 @@
 <% provide(:usuarios_active, 'active') %>
 <% provide(:page_title, 'Nuevo Usuario') %>
-<div class="login-form">
-  <%= form_for @usuario do |f| %>
-    <%= render 'partials/errores', object: f.object %>
 
-    <div class="form-group">
-      <%= f.text_field :email, {placeholder: 'Usuario', class: "form-control"} %>
-    </div>
-    <div class="form-group">
+<div class="row jumbotron">
+  <div class="col-md-6 offset-md-3">
+    <%= form_for @usuario, url: signup_path do |f| %>
+      <%= render 'partials/errores', object: f.object %>
+
+      <%= f.text_field :email, {placeholder: 'Email', class: "form-control"} %>
+      
       <%= f.password_field :password, {placeholder: 'Contraseña', class: "form-control"} %>
-    </div>
-    <div class="form-group">
+      
       <%= f.password_field :password_confirmation, {placeholder: 'Confirmar Contraseña', class: "form-control"} %>
-    </div>
-    <label class="form-group checkbox" style="color: #606060">
-      <%= f.check_box :admin %> Administrador
-    </label>
-    <div class="form-group">
-      <%= f.submit "Crear Usuario", class: "btn btn-primary btn-block" %>
-    </div>
-  <% end %>
+
+      <%= f.label :admin, class: 'checkbox inline' do %>
+        <%= f.check_box :admin %>
+        <span>Administrador</span>
+      <% end %>
+
+      <%= f.submit "Crear Usuario", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

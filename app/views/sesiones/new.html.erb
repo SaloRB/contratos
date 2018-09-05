@@ -1,15 +1,14 @@
 <% provide(:sesiones_active, 'active') %>
-<% provide(:page_title, 'Iniciar Sesión') %>
-<div class="login-form">
-	<%= form_tag sesiones_path do %>
-	  <div class="form-group">
-	    <%= text_field_tag :email, params[:email], {placeholder: 'Usuario', class: "form-control"} %>
-	  </div>
-	  <div class="form-group">
-	    <%= password_field_tag :password, nil, {placeholder: "Contraseña", class: "form-control"} %>
-	  </div>
-	  <div class="form-group">
-	  	<%= submit_tag "Iniciar Sesión", class: "btn btn-primary btn-block" %>
-	  </div>
-	<% end %>
+<% provide(:title, "Iniciar Sesión") %>
+
+<div class="row jumbotron">
+	<div class="col-md-6 offset-md-3">
+		<%= form_for(:session, url: login_path) do |f| %>
+				<%= f.email_field :email, { placeholder: 'Email', class: 'form-control' } %>
+				
+				<%= f.password_field :password, {placeholder: 'Contraseña', class: 'form-control'} %>
+				
+				<%= f.submit "Iniciar Sesión", class: 'btn btn-primary' %>
+		<% end %>
+	</div>
 </div>
